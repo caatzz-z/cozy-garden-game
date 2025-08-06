@@ -1,0 +1,116 @@
+body {
+  background-color: #fff9fb;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  color: #844;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.night {
+  background-color: #1a1a2e;
+  color: #cfcfff;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 20px 0 5px;
+}
+
+p {
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.button-group {
+  margin: 15px 0;
+}
+
+button {
+  background-color: #ffd5ec;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #ccc;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #ffcce7;
+}
+
+body.night button {
+  background-color: #444466;
+  color: #cfcfff;
+}
+
+body.night button:hover {
+  background-color: #5a5a8f;
+}
+
+#garden {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to top, #835e3f, #a7795e);
+  border-top: 10px solid #654321;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  box-shadow: inset 0 -5px 10px rgba(0,0,0,0.1);
+  cursor: crosshair;
+  transition: background 0.5s ease;
+}
+
+body.night #garden {
+  background: linear-gradient(to top, #2e2b44, #4b466b);
+}
+
+.flower {
+  position: absolute;
+  font-size: 2em;
+  animation: grow 0.5s ease-out forwards;
+  transform: scale(0);
+  user-select: none;
+}
+
+@keyframes grow {
+  to {
+    transform: scale(1);
+  }
+}
+
+#confetti {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: 9999;
+}
+.confetti-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ff80aa;
+  opacity: 0.8;
+  border-radius: 2px;
+  animation: confetti-fall 2s ease forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

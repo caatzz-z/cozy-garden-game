@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> garden gamee! 🌷</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1> my cozy flower garden .., 🌸</h1>
+  <p> '.. click anywhere on the soil to plant a flower! ..'  </p>
+
+  <div class="button-group">
+    <button onclick="clearGarden()">🧹 clear my garden! </button>
+    <button id="toggleDayNightBtn">🌙 turn on night mode! </button>
+  </div>
+
+  <div id="garden" onclick="plantFlower(event)"></div>
+  <div id="confetti"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
